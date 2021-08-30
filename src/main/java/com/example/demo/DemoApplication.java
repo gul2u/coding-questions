@@ -29,13 +29,9 @@ public class DemoApplication {
 
     public static Character findFirstUniqueChar(String chars) {
         LinkedHashMap<Character, Integer> charCount = countChars(chars);
+        for (Map.Entry<Character, Integer> e : charCount.entrySet())
+            if (e.getValue() == 1) { return e.getKey(); }
 
-        Iterator<Map.Entry<Character, Integer>> iterator = charCount.entrySet().iterator();
-        while(iterator.hasNext()) {
-            Map.Entry<Character, Integer> e = iterator.next();
-            if(e.getValue() == 1)
-                return e.getKey();
-        }
         return null;
     }
 
