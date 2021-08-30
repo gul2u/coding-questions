@@ -29,10 +29,11 @@ public class DemoApplication {
 
     public static Character findFirstUniqueChar(String chars) {
         LinkedHashMap<Character, Integer> charCount = countChars(chars);
-        for (Map.Entry<Character, Integer> e : charCount.entrySet())
-            if (e.getValue() == 1) { return e.getKey(); }
-
-        return null;
+        return charCount.entrySet()
+                       .stream()
+                       .filter(e -> e.getValue() == 1)
+                       .findFirst()
+                       .map(Map.Entry::getKey).orElse(null);
     }
 
     public static LinkedHashMap<Character, Integer> countChars(String chars) {
