@@ -12,9 +12,23 @@ class DemoApplicationTests {
     }
 
     @Test
-    void firstNonrepeatedCharacter() {
+    void firstNonrepeatedCharacterLinkedHashmap() {
         FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
         String chars = "swiss";
-        firstNonrepeatedCharacter.findChar(chars);
+        System.out.println(firstNonrepeatedCharacter.findCharLinkedHashMap(chars));
+    }
+
+    @Test
+    void firstNonrepeatedCharacterTraverseHashmap() {
+        FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
+        String chars = "swiss";
+        System.out.println(firstNonrepeatedCharacter.findCharTraverseHashMap(chars));
+    }
+
+    @Test
+    void firstNonrepeatedCharacterSetList() {
+        FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
+        String chars = "swiss";
+        System.out.println(firstNonrepeatedCharacter.findCharSetList(chars));
     }
 }
