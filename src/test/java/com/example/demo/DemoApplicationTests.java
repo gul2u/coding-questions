@@ -10,4 +10,11 @@ class DemoApplicationTests {
     @Test
     void contextLoads() {
     }
+
+    @Test
+    void firstNonrepeatedCharacter() {
+        FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
+        String chars = "swiss";
+        firstNonrepeatedCharacter.findChar(chars);
+    }
 }
