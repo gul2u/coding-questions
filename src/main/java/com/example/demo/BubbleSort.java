@@ -43,13 +43,13 @@ public class BubbleSort {
         return nums;
     }
 
-    private static void printUnsorted(int[] nums) {
-        System.out.printf("Unsorted array in Java :%s %n",
+    public static void printUnsorted(int[] nums) {
+        System.out.printf("Unsorted array :%s %n",
                           Arrays.toString(nums));
     }
 
-    private static void printSorted(int[] nums) {
-        System.out.printf("Sorted Array using Bubble sort algorithm :%s %n",
+    public static void printSorted(int[] nums) {
+        System.out.printf("Sorted array :%s %n",
                           Arrays.toString(nums));
     }
 }
