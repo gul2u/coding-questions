@@ -6,6 +6,23 @@ import java.util.*;
 
 public class RemoveDuplicates {
 
+    public static int[] removeDuplicates(int[] numbers) {
+        Arrays.sort(numbers);
+
+        int[] result = new int[numbers.length];
+        int i = 0;
+        int r = 0;
+        int previous = result[r++] = numbers[i++];
+
+        while(i < numbers.length) {
+            if(previous != numbers[i]) {
+                result[r++] = numbers[i];
+            }
+            previous = numbers[i++];
+        }
+        return result;
+    }
+
     public static String[] removeDuplicates(String[] strings){
         if(strings.length <= 1)
             return strings;

@@ -13,12 +13,9 @@ class RemoveDuplicatesTest {
 
     @Test
     void removeDuplicates() {
-//        List<String> strings = Arrays.asList("dupe", "dupe", "duplicate", "duped", "depud", "dupe", "doop", "doop", "pudoo", "pudoo");
-//        String[] results = strings.toArray(new String[strings.size()]);
-//        results = RemoveDuplicates.removeDuplicates(results);
-//        for(String str: results) {
-//            System.out.println(str);
-//        }
+        int[] duplicates = new int[] {20, 20, 12, 12, 12, 11, 50, 50, 8, 4, 2, 45, 45, 1, 1, 100, 19, 91, 19, 55, 55 };
+        System.out.printf("Duplicates: %s %n", Arrays.toString(duplicates));
+        System.out.printf("Removed Duplicates: %s %n", Arrays.toString(RemoveDuplicates.removeDuplicates(duplicates)));
     }
 
     @Test

@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import org.springframework.util.StringUtils;
+
 public class CharacterCounter {
 
     public static int charCount(String str, Character ch) {
@@ -9,5 +11,9 @@ public class CharacterCounter {
                 charCount++;
         }
         return charCount;
+    }
+
+    public static int charCountStringUtils(String str, Character ch) {
+        return StringUtils.countOccurrencesOf(str, ch.toString());
     }
 }

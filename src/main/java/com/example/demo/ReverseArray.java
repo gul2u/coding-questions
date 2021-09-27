@@ -18,13 +18,13 @@ public class ReverseArray {
         return reversedArray.toArray(integers);
     }
 
-//    public static Object[] reverseArray(Object[] objects) {
-//        Object[] reversedArray = new Object[objects.length];
-//
-//        for(int i = 0; i < objects.length; i++) {
-//            reversedArray[objects.length-1 - i] = objects[i];
-//        }
-//
-//        return Arrays.copyOf(reversedArray, reversedArray.length);
-//    }
+    public static void reverseArray(int[] input) {
+        int tmp;
+        for(int i = 0; i < input.length/2; i++) {
+            tmp = input[i];
+            input[i] = input[input.length-1 - i];
+            input[input.length-1 - i] = tmp;
+        }
+    }
+
 }

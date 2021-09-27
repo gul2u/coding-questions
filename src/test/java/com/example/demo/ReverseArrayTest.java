@@ -11,21 +11,9 @@ class ReverseArrayTest {
 
     @Test
     void reverseArray() {
-//        List<Integer> integers = Arrays.asList(1, 2, 5, 12, 12, 4, 2, 2, 17, 2, 1, 1, 16, 20, 10, 10);
-//        Integer[] results = integers.toArray(new Integer[integers.size()]);
-//        results = ReverseArray.reverseArray(results);
-//        for (Integer i: results) {
-//            System.out.println(i);
-//        }
+        int[] nums = new int[] { 1, 2, 3, 4, 5, 10, 20, 30, 40, 50 };
+        System.out.printf("Array: %s %n", Arrays.toString(nums));
+        ReverseArray.reverseArray(nums);
+        System.out.printf("Reversed Array: %s %n", Arrays.toString(nums));
     }
-
-//    @Test
-//    void reverseArrayTest() {
-//        List<Integer> integers = Arrays.asList(1, 2, 5, 12, 12, 4, 2, 2, 17, 2, 1, 1, 16, 20, 10, 10);
-//        Integer[] results = integers.toArray(new Integer[integers.size()]);
-//        results = (Integer[]) ReverseArray.reverseArray(results);
-//        for (Integer i: results) {
-//            System.out.println(i);
-//        }
-//    }
 }
