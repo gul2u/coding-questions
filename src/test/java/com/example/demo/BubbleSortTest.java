@@ -7,15 +7,37 @@ class BubbleSortTest {
 
     @Test
     void sortAscending() {
-        BubbleSort.sortAscending(new int[] {20, 12, 45, 19, 91, 55 });
-        BubbleSort.sortAscending(new int[] {-1, 0, 1 });
-        BubbleSort.sortAscending(new int[] {-3, -9, -2, -1 });
+        int[] nums = new int[] {20, 12, 45, 19, 91, 55 };
+        Utils.printIntArray("Unsorted: ", nums);
+        BubbleSort.sortAscending(nums);
+        Utils.printIntArray("Sorted: ", nums);
+
+        nums = new int[] {-1, 0, 1 };
+        Utils.printIntArray("Unsorted: ", nums);
+        BubbleSort.sortAscending(nums);
+        Utils.printIntArray("Sorted: ", nums);
+
+        nums = new int[] {-3, -9, -2, -1 };
+        Utils.printIntArray("Unsorted: ", nums);
+        BubbleSort.sortAscending(nums);
+        Utils.printIntArray("Sorted: ", nums);
     }
 
     @Test
     void sortDescending() {
-        BubbleSort.sortDescending(new int[] {20, 12, 45, 19, 91, 55 });
-        BubbleSort.sortDescending(new int[] {-1, 0, 1 });
-        BubbleSort.sortDescending(new int[] {-3, -9, -2, -1 });
+        int[] nums = new int[] {20, 12, 45, 19, 91, 55 };
+        Utils.printIntArray("Unsorted: ", nums);
+        BubbleSort.sortDescending(nums);
+        Utils.printIntArray("Sorted: ", nums);
+
+        nums = new int[] {-1, 0, 1 };
+        Utils.printIntArray("Unsorted: ", nums);
+        BubbleSort.sortDescending(nums);
+        Utils.printIntArray("Sorted: ", nums);
+
+        nums = new int[] {-3, -9, -2, -1 };
+        Utils.printIntArray("Unsorted: ", nums);
+        BubbleSort.sortDescending(nums);
+        Utils.printIntArray("Sorted: ", nums);
     }
 }
