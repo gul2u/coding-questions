@@ -14,7 +14,7 @@ public class MissingNumber {
         return expectedSum - sum;
     }
 
-    public static void findMissingNumberBitset(int[] numbers, int totalCount) {
+    public static int[] findMissingNumberBitset(int[] numbers, int totalCount) {
         int missing = totalCount - numbers.length;
         BitSet bitSet = new BitSet(totalCount);
 
@@ -29,7 +29,6 @@ public class MissingNumber {
             missingNumbers[i] = ++lastMissingIndex;
         }
 
-        System.out.printf("Missing Numbers in Array: %s, with total count %d %n", Arrays.toString(numbers), totalCount);
-        System.out.printf("%s", Arrays.toString(missingNumbers));
+        return missingNumbers;
     }
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.UnaryOperator;
+import java.util.stream.Collectors;
 
 /*
 * Merge Sort implementation.
@@ -41,9 +42,8 @@ public class MergeSort {
         }
     }
 
-    public static List<Integer> mergeSort(List<Integer> input, Integer start, Integer end) {
-        @SuppressWarnings("WrapperTypeMayBePrimitive")
-        Integer mid = (start + end)/2;
+    public static void mergeSort(List<Integer> input, Integer start, Integer end) {
+        int mid = (start + end)/2;
         if(start < end) {
             mergeSort(input, start, mid);
             mergeSort(input, mid + 1, end);
@@ -52,7 +52,7 @@ public class MergeSort {
         List<Integer> temp = new ArrayList<>();
         int first = start, last = mid + 1;
         while(first <= mid && last <= end) {
-            if (input.get(start) < input.get(last)) {
+            if (input.get(first) < input.get(last)) {
                 temp.add(input.get(first++));
             } else {
                 temp.add(input.get(last++));
@@ -65,6 +65,9 @@ public class MergeSort {
             temp.add(input.get(last++));
         }
 
-        return temp;
+        int i = 0;
+        while(start <= end) {
+            input.set(start++, temp.get(i++));
+        }
     }
 }

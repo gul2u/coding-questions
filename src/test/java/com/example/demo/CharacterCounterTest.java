@@ -8,7 +8,15 @@ class CharacterCounterTest {
 
     @Test
     public void charCount(){
-        System.out.println(CharacterCounter.charCount("ASC1II", 'I'));
+        String input = "ASCII";
+        Character ch = 'I';
+
+        System.out.println("Input: ASC1II");
+        System.out.println("Char: I");
+        int count = CharacterCounter.charCount(input, ch);
+        System.out.println("Count: " + count);
+
+        assertEquals(2, count);
     }
 
 }
